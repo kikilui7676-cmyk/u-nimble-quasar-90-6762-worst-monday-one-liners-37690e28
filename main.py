@@ -1,14 +1,13 @@
 import os
 
-LINE = "My deploy failed at 9:03, the rollback failed at 9:04, and stand-up opened with a vibe check."
 
-
-def main():
-    out_dir = os.environ["MAKEFUN_OUTPUT_DIR"]
-    os.makedirs(out_dir, exist_ok=True)
-    with open(os.path.join(out_dir, "entry.txt"), "w", encoding="utf-8") as f:
-        f.write(LINE)
+def _tulis_senin_terburuk():
+    baris = "My first meeting on Monday was with my own error log. It brought slides."
+    keluar = os.environ["MAKEFUN_OUTPUT_DIR"]
+    os.makedirs(keluar, exist_ok=True)
+    with open(os.path.join(keluar, "entry.txt"), "w", encoding="utf-8") as f:
+        f.write(baris + "\n")
 
 
 if __name__ == "__main__":
-    main()
+    _tulis_senin_terburuk()
